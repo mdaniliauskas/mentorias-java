@@ -33,6 +33,8 @@ Com esse menu, ao iniciar o programa, deverá ser perguntado ao usuário qual ti
 Observação: Para este programa, Quero uma Cobertura de 85% de testes unitários
  */
 
+import br.com.mentoria1.calculadoras.calculadoras.CalculadoraPadrao;
+
 import java.util.Scanner;
 
 
@@ -43,11 +45,12 @@ public class MenuCalculadora {
         int opcaoMenu;
 
         System.out.println("\nCalculadoras \n");
-        System.out.println("Digite a opção de uma das calculadoras abaixo: ");
+        System.out.println("Escolha uma das calculadoras abaixo: ");
         System.out.println("1 - Calculadora padrão");
         System.out.println("2 - Calculadora IMC");
         System.out.println("3 - Calculadora área");
         System.out.println("4 - Sair \n");
+        System.out.println("Digite a opção: ");
         opcaoMenu = sc.nextInt();
         switch (opcaoMenu) {
         case 1:
@@ -63,11 +66,11 @@ public class MenuCalculadora {
             sc.close();
             break;
         case 4:
-            System.out.println("\nObrigado! \n");
+            System.out.println("\nObrigado!\n");
             sc.close();
             break;
         default:
-            System.out.println("\nPor favor, digite uma opção válida!");
+            System.out.println("\nPor favor, digite uma opção válida!\n");
             main(null);
         }
     }
