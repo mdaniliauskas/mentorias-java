@@ -33,8 +33,42 @@ Com esse menu, ao iniciar o programa, deverá ser perguntado ao usuário qual ti
 Observação: Para este programa, Quero uma Cobertura de 85% de testes unitários
  */
 
+import java.util.Scanner;
+
+
 public class MenuCalculadora {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+        int opcaoMenu;
+
+        System.out.println("\nCalculadoras \n");
+        System.out.println("Digite a opção de uma das calculadoras abaixo: ");
+        System.out.println("1 - Calculadora padrão");
+        System.out.println("2 - Calculadora IMC");
+        System.out.println("3 - Calculadora área");
+        System.out.println("4 - Sair \n");
+        opcaoMenu = sc.nextInt();
+        switch (opcaoMenu) {
+        case 1:
+            CalculadoraPadrao.menuCalculadoraPadrao();
+            sc.close();
+            break;
+        case 2:
+            System.out.println("Opção 2");
+            sc.close();
+            break;
+        case 3:
+            System.out.println("Opção 3");
+            sc.close();
+            break;
+        case 4:
+            System.out.println("\nObrigado! \n");
+            sc.close();
+            break;
+        default:
+            System.out.println("\nPor favor, digite uma opção válida!");
+            main(null);
+        }
     }
 }
